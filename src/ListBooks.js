@@ -1,7 +1,8 @@
 import React, {Component} from 'react'
 import { Link } from 'react-router-dom'
-import PropTypes from 'prop-types'
-import * as BooksAPI from './BooksAPI'
+// import PropTypes from 'prop-types'
+// import * as BooksAPI from './BooksAPI'
+import Bookshelf from './Bookshelf'
 
 class ListBooks extends Component {
     render () {
@@ -12,6 +13,11 @@ class ListBooks extends Component {
             </div>
             <div className="list-books-content">
               <div>
+                <Bookshelf title="Currently Reading"/>
+                <Bookshelf title="Want to read"/>
+                <Bookshelf title="Read"/>
+                
+              
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
                   <div className="bookshelf-books">
