@@ -18,11 +18,11 @@ class BooksApp extends React.Component {
         })
     }
   
-    changeShelf = ( aBook, shelf ) => {
-        BooksAPI.update( aBook, shelf ).then((resp) => {
+    changeShelf = ( aBook, aShelf ) => {
+        BooksAPI.update( aBook, aShelf ).then(() => {
             
             // update shelf prop from a book
-            aBook.shelf = shelf
+            aBook.shelf = aShelf
             
             // get list of books without updated or new book
             let updatedBooks = this.state.books.filter( book => book.id !== aBook.id)
